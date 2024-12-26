@@ -1,0 +1,64 @@
+## Make 'nextword' (Ctrl+Right) and 'chopwordright' (Ctrl+Delete)
+## stop at word ends instead of at beginnings.
+set afterends
+## Detect word boundaries differently by treating punctuation
+## characters as parts of words.
+set wordbounds
+## Automatically indent a newly created line to the same number of
+## tabs and/or spaces as the preceding line
+set autoindent
+## Use cut-from-cursor-to-end-of-line by default
+set cutfromcursor
+## Display a "scrollbar" on the righthand side of the edit window
+set indicator
+## Scroll the buffer contents per half-screen instead of per line
+set jumpyscrolling
+## Don't automatically add a newline when a file does not end with one
+set nonewlines
+## Make the Home key smarter
+set smarthome
+## Use the end of the title bar for some state flags
+set stateflags
+## Let an unmodified Backspace or Delete erase the marked region
+set zap
+## Constantly display the cursor position in the status bar or minibar
+set constantshow
+## Read a file into a new buffer by default
+set multibuffer
+## Disable display of line numbers to the left of the text area
+unset linenumbers
+## Disable mouse support
+unset mouse
+
+bind ^Z suspend main
+
+bind F2 tabstospaces main
+bind F3 whitespacedisplay main
+
+bind M-X cut main
+bind M-C copy main
+bind M-V paste main
+
+bind Ins verbatim main
+
+bind M-' center main
+
+bind M-M findbracket main
+
+bind ^P up main
+bind ^N down main
+bind M-P up main
+bind M-N down main
+
+bind M-B prevword main
+bind M-F nextword main
+
+bind ^H left main
+bind ^L right main
+
+bind M-K beginpara main
+bind M-J endpara main
+bind M-H home main
+bind M-L end main
+bind M-I prevword main
+bind M-O nextword main
